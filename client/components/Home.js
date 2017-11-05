@@ -2,7 +2,7 @@ import React from 'react';
 
 const Home = () => {
   return (
-    <div id="container">
+    <div id="inner-container">
       <div className="item">
         <p>1</p>
       </div>

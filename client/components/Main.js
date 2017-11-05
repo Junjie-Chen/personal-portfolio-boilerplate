@@ -1,10 +1,12 @@
 import React from 'react';
+import Sidebar from './Sidebar';
 
 const Main = props => {
   const { children } = props;
 
   return (
-    <div>
+    <div id="outer-container">
+      <Sidebar />
       {children}
     </div>
   );
