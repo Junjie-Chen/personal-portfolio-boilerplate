@@ -1,7 +1,9 @@
 @media screen and (max-width: 1200px) {
   #inner-container {
-    .item {
-      flex: 1 1 calc(50% - 10px);
+    #main-content {
+      .item {
+        flex: 1 1 calc(50% - 10px);
+      }
     }
   }
 }
@@ -15,7 +17,7 @@
       h2 {
         display: none;
 
-        &.acronym {
+        &.name {
           display: block;
         }
       }
@@ -23,8 +25,10 @@
   }
 
   #inner-container {
-    .item {
-      flex: 1 1 calc(100% - 10px);
+    #main-content {
+      .item {
+        flex: 1 1 calc(100% - 10px);
+      }
     }
   }
 }

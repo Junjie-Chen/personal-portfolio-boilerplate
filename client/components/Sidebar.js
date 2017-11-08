@@ -1,9 +1,9 @@
 import React from 'react';
-import {NavLink} from 'react-router-dom';
-import {connect} from 'react-redux';
-import {CSSTransitionGroup} from 'react-transition-group';
+import { NavLink } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { CSSTransitionGroup } from 'react-transition-group';
 import PropTypes from 'prop-types';
-import {toggleDropdown} from '../store';
+import { toggleDropdown } from '../store';
 
 const dropdownMenu = () => {
   return (
@@ -22,16 +22,16 @@ const dropdownMenu = () => {
 }
 
 const Sidebar = props => {
-  const {dropdown, handleClick} = props;
+  const { sidebar, dropdown, handleClick } = props;
 
   const menu = dropdown ? dropdownMenu() : '';
 
   return (
-    <nav id="sidebar">
+    <nav id="sidebar" className={sidebar ? 'active' : ''}>
       <div className="sidebar-header">
         <img src="images/react.png" />
         <h2>Your Name</h2>
-        <h2 className="acronym">Acronym</h2>
+        <h2 className="name">YN</h2>
       </div>
       <ul className="sidebar-body">
         <li>
@@ -105,6 +105,7 @@ const Sidebar = props => {
 }
 
 const mapStateToProps = state => ({
+  sidebar: state.sidebar,
   dropdown: state.dropdown
 })
 
@@ -115,6 +116,7 @@ const mapDispatchToProps = dispatch => ({
 })
 
 Sidebar.propTypes = {
+  sidebar: PropTypes.bool.isRequired,
   dropdown: PropTypes.bool.isRequired,
   handleClick: PropTypes.func.isRequired
 };
