@@ -12,6 +12,10 @@
   #sidebar {
     max-width: 80px;
     min-width: 80px;
+    -webkit-transition: max-width 0.5s ease-in, min-width 0.5s ease-in;
+    -moz-transition: max-width 0.5s ease-in, min-width 0.5s ease-in;
+    -o-transition: max-width 0.5s ease-in, min-width 0.5s ease-in;
+    transition: max-width 0.5s ease-in, min-width 0.5s ease-in;
 
     .sidebar-header {
       h2 {
@@ -21,6 +25,45 @@
           display: block;
         }
       }
+    }
+
+    .sidebar-body {
+      > li {
+        a {
+          padding-left: 10px;
+          text-align: center;
+
+          span {
+            display: block;
+            margin-right: 0;
+            margin-bottom: 5px;
+
+            &.glyphicon.glyphicon-chevron-down, &.glyphicon.glyphicon-chevron-up {
+              margin-top: 5px;
+              position: static;
+            }
+          }
+        }
+
+        > span {
+          .dropdown {
+            li {
+              a {
+                padding-left: 10px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    > a {
+      display: block;
+      margin: 15px auto;
+    }
+
+    .sidebar-footer {
+      display: none;
     }
   }
 

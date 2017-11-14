@@ -12,6 +12,10 @@ body {
     font-size: 16px;
     color: #fff;
     background-color: #42A5F5;
+    -webkit-transition: max-width 0.5s ease-out, min-width 0.5s ease-out;
+    -moz-transition: max-width 0.5s ease-out, min-width 0.5s ease-out;
+    -o-transition: max-width 0.5s ease-out, min-width 0.5s ease-out;
+    transition: max-width 0.5s ease-out, min-width 0.5s ease-out;
 
     .sidebar-header {
       padding: 20px;
@@ -134,6 +138,10 @@ body {
     &.active {
       max-width: 80px;
       min-width: 80px;
+      -webkit-transition: max-width 0.5s ease-in, min-width 0.5s ease-in;
+      -moz-transition: max-width 0.5s ease-in, min-width 0.5s ease-in;
+      -o-transition: max-width 0.5s ease-in, min-width 0.5s ease-in;
+      transition: max-width 0.5s ease-in, min-width 0.5s ease-in;
 
       .sidebar-header {
         h2 {
@@ -143,6 +151,41 @@ body {
             display: block;
           }
         }
+      }
+
+      .sidebar-body {
+        > li {
+          a {
+            padding-left: 10px;
+            text-align: center;
+
+            span {
+              display: block;
+              margin-right: 0;
+              margin-bottom: 5px;
+
+              &.glyphicon.glyphicon-chevron-down, &.glyphicon.glyphicon-chevron-up {
+                margin-top: 5px;
+                position: static;
+              }
+            }
+          }
+
+          > span {
+            .dropdown {
+              li {
+                a {
+                  padding-left: 10px;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      > a {
+        display: block;
+        margin: 15px auto;
       }
 
       .sidebar-footer {
@@ -215,7 +258,7 @@ body {
       .item {
         flex: 1 1 calc(25% - 10px);
         position: relative;
-        height: calc(53vh - 10px);
+        height: calc(57vh - 10px);
         padding: 5px;
         margin: 5px;
         border: 3px solid #9C27B0;
