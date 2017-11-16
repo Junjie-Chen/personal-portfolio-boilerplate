@@ -1,35 +1,48 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { NavLink } from 'react-router-dom';
+import { CSSTransitionGroup } from 'react-transition-group';
 import PropTypes from 'prop-types';
-import { toggleSidebar } from '../store';
+import { toggleSidebar, toggleNavbar } from '../store';
 
 const Navbar = props => {
-  const { handleClick } = props;
+  const { navbar, handleClickSidebar, handleClickNavbar } = props;
 
   return (
     <nav id="navbar">
-      <div className="navbar-header">
-        <button onClick={handleClick}>Toggle Me</button>
+      <div className={navbar ? 'navbar-header navbar-active' : 'navbar-header'}>
+        <button onClick={handleClickSidebar}>Toggle Me</button>
+        <a href="#" onClick={handleClickNavbar}>
+          <i className="material-icons md-24 md-light">menu</i>
+        </a>
+        <NavLink to="/">Title</NavLink>
       </div>
-      <ul className="navbar-body">
-        <li><NavLink to="/">Home</NavLink></li>
-        <li><NavLink to="/about">About</NavLink></li>
-        <li><NavLink to="/pages">Pages</NavLink></li>
-        <li><NavLink to="/portfolio">Portfolio</NavLink></li>
+      <ul className={navbar ? 'navbar-body navbar-active' : 'navbar-body'}>
+        <li><NavLink to="/">Page</NavLink></li>
+        <li><NavLink to="/">Page</NavLink></li>
+        <li><NavLink to="/">Page</NavLink></li>
+        <li><NavLink to="/">Page</NavLink></li>
       </ul>
     </nav>
   );
 }
 
+const mapStateToProps = state => ({
+  navbar: state.navbar
+})
+
 const mapDispatchToProps = dispatch => ({
-  handleClick() {
+  handleClickSidebar() {
     dispatch(toggleSidebar());
+  },
+  handleClickNavbar() {
+    dispatch(toggleNavbar());
   }
 });
 
 Navbar.propTypes = {
-  handleClick: PropTypes.func.isRequired
+  handleClickSidebar: PropTypes.func.isRequired,
+  handleClickNavbar: PropTypes.func.isRequired
 };
 
-export default connect(null, mapDispatchToProps)(Navbar);
+export default connect(mapStateToProps, mapDispatchToProps)(Navbar);

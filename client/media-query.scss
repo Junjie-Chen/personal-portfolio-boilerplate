@@ -1,5 +1,9 @@
 @media screen and (max-width: 1200px) {
   #inner-container {
+    #navbar {
+      font-size: 14px;
+    }
+
     #main-content {
       .item {
         flex: 1 1 calc(50% - 10px);
@@ -12,6 +16,10 @@
   #sidebar {
     max-width: 80px;
     min-width: 80px;
+    -webkit-transition: max-width 0.5s ease-in, min-width 0.5s ease-in;
+    -moz-transition: max-width 0.5s ease-in, min-width 0.5s ease-in;
+    -o-transition: max-width 0.5s ease-in, min-width 0.5s ease-in;
+    transition: max-width 0.5s ease-in, min-width 0.5s ease-in;
 
     .sidebar-header {
       h2 {
@@ -22,9 +30,134 @@
         }
       }
     }
+
+    .sidebar-body {
+      > li {
+        a {
+          padding-left: 10px;
+          text-align: center;
+
+          span {
+            display: block;
+            margin-right: 0;
+            margin-bottom: 5px;
+
+            &.glyphicon.glyphicon-chevron-down, &.glyphicon.glyphicon-chevron-up {
+              margin-top: 5px;
+              position: static;
+            }
+          }
+        }
+
+        > span {
+          .dropdown {
+            li {
+              a {
+                padding-left: 10px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    > a {
+      display: block;
+      margin: 15px auto;
+    }
+
+    .sidebar-footer {
+      display: none;
+    }
   }
 
   #inner-container {
+    #navbar {
+      position: relative;
+      display: block;
+      font-size: 16px;
+      z-index: 1;
+
+      .navbar-header {
+        position: absolute;
+        top: 50%;
+        transform: translate(0, -50%);
+        margin-left: 5px;
+        margin-right: 5px;
+        padding-left: 5px;
+        width: calc(100% - 10px);
+        -webkit-transition: background-color 1s ease;
+        -moz-transition: background-color 1s ease;
+        -o-transition: background-color 1s ease;
+        transition: background-color 1s ease;
+
+        button {
+          display: none;
+        }
+
+        a {
+          display: inline;
+          color: #fff;
+          font-size: 36px;
+
+          .material-icons.md-24 {
+            &.md-light {
+              padding-right: 20px;
+              color: rgba(255, 255, 255, 1);
+            }
+
+            &.md-inactive {
+              color: rgba(255, 255, 255, 0.3);
+            }
+          }
+        }
+
+        &.navbar-active {
+          background-color: #42A5F5;
+        }
+      }
+
+      .navbar-body {
+        display: block;
+        visibility: hidden;
+        padding-right: 0;
+        margin-top: 75px;
+        overflow: hidden;
+        max-height: 0;
+        -webkit-transition: visibility 0s linear 1s, max-height 1s ease;
+        -moz-transition: visibility 0s linear 1s, max-height 1s ease;
+        -o-transition: visibility 0s linear 1s, max-height 1s ease;
+        transition: visibility 0s linear 1s, max-height 1s ease;
+
+        li {
+          display: block;
+          padding: 10px 5px;
+          margin-left: 5px;
+          margin-right: 5px;
+          width: calc(100% - 10px);
+          height: auto;
+          background-color: #42A5F5;
+
+          a {
+            position: static;
+            display: block;
+            transform: none;
+            width: 100%;
+          }
+
+          &:hover {
+            background-color: #FF9800;
+          }
+        }
+
+        &.navbar-active {
+          visibility: visible;
+          max-height: 168px;
+          transition-delay: 0s;
+        }
+      }
+    }
+
     #main-content {
       .item {
         flex: 1 1 calc(100% - 10px);
