@@ -1,5 +1,7 @@
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Roboto', sans-serif;
 
   #outer-container {
     display: flex;
@@ -12,10 +14,10 @@ body {
     font-size: 16px;
     color: #fff;
     background-color: #42A5F5;
-    -webkit-transition: max-width 0.5s ease-out, min-width 0.5s ease-out;
-    -moz-transition: max-width 0.5s ease-out, min-width 0.5s ease-out;
-    -o-transition: max-width 0.5s ease-out, min-width 0.5s ease-out;
-    transition: max-width 0.5s ease-out, min-width 0.5s ease-out;
+    -webkit-transition: max-width 0.5s ease, min-width 0.5s ease;
+    -moz-transition: max-width 0.5s ease, min-width 0.5s ease;
+    -o-transition: max-width 0.5s ease, min-width 0.5s ease;
+    transition: max-width 0.5s ease, min-width 0.5s ease;
 
     .sidebar-header {
       padding: 20px;
@@ -135,13 +137,9 @@ body {
       }
     }
 
-    &.active {
+    &.sidebar-active {
       max-width: 80px;
       min-width: 80px;
-      -webkit-transition: max-width 0.5s ease-in, min-width 0.5s ease-in;
-      -moz-transition: max-width 0.5s ease-in, min-width 0.5s ease-in;
-      -o-transition: max-width 0.5s ease-in, min-width 0.5s ease-in;
-      transition: max-width 0.5s ease-in, min-width 0.5s ease-in;
 
       .sidebar-header {
         h2 {
@@ -195,10 +193,10 @@ body {
   }
 
   #inner-container {
-    flex: 1 1 auto;
+    flex: 1 1 100%;
     display: flex;
     flex-direction: column;
-    background-color: #F44336;
+    background-color: #FF5722;
 
     #navbar {
       flex: 1 1 auto;
@@ -210,33 +208,36 @@ body {
       font-size: 16px;
 
       .navbar-header {
-        flex: 1 1 50%;
-        padding-left: 5px;
+        flex: 1 1 70%;
+        margin-left: 5px;
 
         button {
           height: 50px;
-          background-color: #00BCD4;
+          background-color: #42A5F5;
           outline: none;
+        }
+
+        a {
+          display: none;
         }
       }
 
       .navbar-body {
-        flex: 1 1 50%;
+        flex: 1 1 30%;
         display: flex;
         flex-direction: row;
-        align-items: center;
         padding-left: 0;
+        padding-right: 5px;
         margin-bottom: 0;
         text-decoration: none;
 
         li {
           position: relative;
           display: inline-block;
-          margin-left: 5px;
-          margin-right: 5px;
-          width: calc(25% - 10px);
+          // margin-left: 5px;
+          // margin-right: 5px;
+          width: 25%;
           height: 50px;
-          background-color:#00BCD4;
 
           a {
             position: absolute;
@@ -245,6 +246,10 @@ body {
             transform: translate(-50%, -50%);
             color: inherit;
             text-decoration: none;
+          }
+
+          &:hover {
+            background-color: #FF9800
           }
         }
       }
@@ -258,11 +263,11 @@ body {
       .item {
         flex: 1 1 calc(25% - 10px);
         position: relative;
-        height: calc(57vh - 10px);
+        height: calc(68vh - 10px);
         padding: 5px;
         margin: 5px;
         border: 3px solid #9C27B0;
-        background-color: #FF9800;
+        background-color: #FF7043;
 
         p {
           position: absolute;
