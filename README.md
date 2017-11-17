@@ -15,4 +15,4 @@ This repository is under its early development. Keep watching for updates.
 
 ## Demo
 
-Click on [this link](https://personal-portfolio-boilerplate.herokuapp.com/) to the see the demo.
+Click on [this link](https://personal-portfolio-boilerplate.herokuapp.com/) to see the demo.
