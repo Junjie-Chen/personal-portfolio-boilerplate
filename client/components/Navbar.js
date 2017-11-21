@@ -12,9 +12,7 @@ const Navbar = props => {
     <nav id="navbar">
       <div className={navbar ? 'navbar-header navbar-active' : 'navbar-header'}>
         <button onClick={handleClickSidebar}>Toggle Me</button>
-        <a href="#" onClick={handleClickNavbar}>
-          <i className="material-icons md-24 md-light">menu</i>
-        </a>
+        <i className="material-icons md-24 md-light" onClick={handleClickNavbar}>menu</i>
         <NavLink to="/">Title</NavLink>
       </div>
       <ul className={navbar ? 'navbar-body navbar-active' : 'navbar-body'}>

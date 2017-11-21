@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { HashRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
-import { Main, Home } from './components';
+import { Main, Portfolio, Project } from './components';
 
 class Routes extends Component {
   render() {
@@ -8,15 +8,16 @@ class Routes extends Component {
       <Router hashType="noslash">
         <Main>
           <Switch>
-            <Route exact path="/" component={Home} />
-            <Route exact path="/about" component={Home} />
-            <Route exact path="/pages" component={Home} />
-            <Route exact path="/music" component={Home} />
-            <Route exact path="/picture" component={Home} />
-            <Route exact path="/blog" component={Home} />
-            <Route exact path="/portfolio" component={Home} />
-            <Route exact path="/faq" component={Home} />
-            <Route exact path="/contact" component={Home} />
+            <Route exact path="/" component={Portfolio} />
+            <Route path="/about" component={Portfolio} />
+            <Route path="/pages" component={Portfolio} />
+            <Route path="/music" component={Portfolio} />
+            <Route path="/picture" component={Portfolio} />
+            <Route path="/blog" component={Portfolio} />
+            <Route path="/portfolio" component={Portfolio} />
+            <Route path="/project/:id" component={Project} />
+            <Route path="/faq" component={Portfolio} />
+            <Route path="/contact" component={Portfolio} />
           </Switch>
         </Main>
       </Router>
