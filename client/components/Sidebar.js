@@ -80,7 +80,7 @@ const Sidebar = props => {
       </ul>
 
       <a className="btn btn-social-icon btn-lg btn-linkedin" href="#">
-      <span className="fa fa-linkedin"></span>
+        <span className="fa fa-linkedin"></span>
       </a>
       <a className="btn btn-social-icon btn-lg btn-github" href="#">
         <span className="fa fa-github"></span>

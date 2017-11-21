@@ -73,16 +73,11 @@
 
   #inner-container {
     #navbar {
-      position: relative;
-      display: block;
-      font-size: 16px;
+      // position: relative;
+      // display: block;
       z-index: 1;
 
       .navbar-header {
-        position: absolute;
-        top: 50%;
-        transform: translate(0, -50%);
-        margin-left: 5px;
         margin-right: 5px;
         padding-left: 5px;
         width: calc(100% - 10px);
@@ -95,12 +90,11 @@
           display: none;
         }
 
-        a {
+        i {
           display: inline;
           color: #fff;
-          font-size: 36px;
 
-          .material-icons.md-24 {
+          &.material-icons.md-24 {
             &.md-light {
               padding-right: 20px;
               color: rgba(255, 255, 255, 1);
@@ -110,6 +104,16 @@
               color: rgba(255, 255, 255, 0.3);
             }
           }
+
+          &:hover {
+            cursor: pointer;
+          }
+        }
+
+        a {
+          display: inline;
+          color: #fff;
+          font-size: 36px;
         }
 
         &.navbar-active {
@@ -118,10 +122,14 @@
       }
 
       .navbar-body {
-        display: block;
+        top: 75px;
+        width: 100%;
+        height: auto;
+        transform: none;
+        // display: block;
         visibility: hidden;
         padding-right: 0;
-        margin-top: 75px;
+        // margin-top: 75px;
         overflow: hidden;
         max-height: 0;
         -webkit-transition: visibility 0s linear 1s, max-height 1s ease;
