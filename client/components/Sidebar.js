@@ -47,11 +47,11 @@ const Sidebar = props => {
           </NavLink>
         </li>
         <li>
-          <NavLink to="/pages" onClick={handleClick}>
+          <div onClick={handleClick}>
             <span className="glyphicon glyphicon-duplicate" aria-hidden="true"></span>
             Pages
             <span className={dropdown ? "glyphicon glyphicon-chevron-up" : "glyphicon glyphicon-chevron-down"} aria-hidden="true"></span>
-          </NavLink>
+          </div>
           <CSSTransitionGroup
             transitionName="dropdown"
             transitionEnterTimeout={500}

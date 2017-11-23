@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import Navbar from './Navbar';
 import Cover from './Cover';
@@ -47,6 +48,12 @@ const projects = [
   }
 ];
 
+const Container = styled.div`
+`;
+
+const Content = styled.div`
+`;
+
 const Project = props => {
   const { id } = props.match.params;
   const { position } = props;
@@ -56,12 +63,12 @@ const Project = props => {
   });
 
   return (
-    <div id="inner-container">
+    <Container id="inner-container">
       <Navbar />
-      <div id="main-content">
+      <Content id="main-content">
         <Cover image={project.image} width={position.width} height={position.height} left={position.left} top={position.top} />
-      </div>
-    </div>
+      </Content>
+    </Container>
   );
 }
 

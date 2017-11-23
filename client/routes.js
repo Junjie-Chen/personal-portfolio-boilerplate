@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { HashRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
-import { Main, Portfolio, Project } from './components';
+import { Main, Portfolio, Project, About } from './components';
 
 class Routes extends Component {
   render() {
@@ -9,7 +9,7 @@ class Routes extends Component {
         <Main>
           <Switch>
             <Route exact path="/" component={Portfolio} />
-            <Route path="/about" component={Portfolio} />
+            <Route path="/about" component={About} />
             <Route path="/pages" component={Portfolio} />
             <Route path="/music" component={Portfolio} />
             <Route path="/picture" component={Portfolio} />
