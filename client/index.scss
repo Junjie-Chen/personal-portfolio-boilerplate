@@ -48,7 +48,7 @@ body {
           margin-bottom: 5px;
         }
 
-        a {
+        a, div {
           position: relative;
           display: block;
           padding: 10px 10px 10px 20px;
@@ -64,6 +64,10 @@ body {
               right: 10px;
             }
           }
+        }
+
+        div {
+          cursor: pointer;
         }
 
         > span {
@@ -153,7 +157,7 @@ body {
 
       .sidebar-body {
         > li {
-          a {
+          a, div {
             padding-left: 10px;
             text-align: center;
 
@@ -279,7 +283,7 @@ body {
       .item {
         flex: 1 1 calc(25% - 10px);
         // position: relative;
-        height: calc(46vh - 10px);
+        height: calc(55vh - 10px);
         padding: 5px;
         margin: 5px;
         border: 3px solid #9C27B0;

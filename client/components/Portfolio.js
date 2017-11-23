@@ -10,7 +10,7 @@ const Portfolio = props => {
     const width = event.currentTarget.offsetWidth;
     const height = event.currentTarget.offsetHeight;
     const left = event.currentTarget.offsetLeft;
-    const top = event.currentTarget.offsetTop - window.scrollY;
+    const top = event.currentTarget.offsetTop;
 
     props.getPosition(width, height, left, top);
   }
