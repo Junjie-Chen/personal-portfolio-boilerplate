@@ -6,6 +6,7 @@ const Image = styled.img`
   position: absolute;
   padding-left: 5px;
   padding-right: 5px;
+  max-width: 100%;
   width: ${props => props.width}px;
   height: ${props => props.height}px;
   left: ${props => props.left}px;
