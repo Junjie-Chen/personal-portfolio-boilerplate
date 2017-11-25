@@ -20,7 +20,7 @@ const getWindowWidth = () => {
 
 const Cover = ({image, width, height, left, top}) => {
   return (
-    <Motion defaultStyle={{width: width, height: height, left: left, top: top}} style={{width: spring(getWindowWidth()), height: spring(400), left: spring(0), top: spring(0)}}>
+    <Motion defaultStyle={{width: width, height: height, left: left, top: top}} style={{width: spring(getWindowWidth()), height: spring(500), left: spring(0), top: spring(0)}}>
       {interpolatingStyle => <Image src={image} width={interpolatingStyle.width} height={interpolatingStyle.height} left={interpolatingStyle.left} top={interpolatingStyle.top} />}
     </Motion>
   );

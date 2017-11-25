@@ -4,43 +4,43 @@ import { NavLink } from 'react-router-dom';
 const projects = [
   {
     id: 1,
-    name: 'Flexbox',
-    image: 'images/flexbox.png'
+    name: 'Project_1',
+    image: 'images/project_1.jpg'
   },
   {
     id: 2,
-    name: 'Transition',
-    image: 'images/transition.png'
+    name: 'Project_2',
+    image: 'images/project_2.jpg'
   },
   {
     id: 3,
-    name: 'Parallax',
-    image: 'images/parallax.png'
+    name: 'Project_3',
+    image: 'images/project_3.jpg'
   },
   {
     id: 4,
-    name: 'Center',
-    image: 'images/center.png'
+    name: 'Project_4',
+    image: 'images/project_4.jpg'
   },
   {
     id: 5,
-    name: 'Grid',
-    image: 'images/grid.png'
+    name: 'Project_5',
+    image: 'images/project_5.jpg'
   },
   {
     id: 6,
-    name: 'Animation',
-    image: 'images/animation.png'
+    name: 'Project_6',
+    image: 'images/project_6.jpg'
   },
   {
     id: 7,
-    name: 'Sass',
-    image: 'images/sass.png'
+    name: 'Project_7',
+    image: 'images/project_7.jpg'
   },
   {
     id: 8,
-    name: 'RGBA',
-    image: 'images/rgba.png'
+    name: 'Project_8',
+    image: 'images/project_8.jpg'
   }
 ];
 
