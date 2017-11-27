@@ -1,6 +1,7 @@
 import React from 'react';
 import { Motion, spring } from 'react-motion';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 const Image = styled.img`
   position: absolute;
@@ -25,5 +26,13 @@ const Cover = ({image, width, height, left, top}) => {
     </Motion>
   );
 }
+
+Cover.propTypes = {
+  image: PropTypes.string.isRequired,
+  width: PropTypes.number.isRequired,
+  height: PropTypes.number.isRequired,
+  left: PropTypes.number.isRequired,
+  top: PropTypes.number.isRequired
+};
 
 export default Cover;
