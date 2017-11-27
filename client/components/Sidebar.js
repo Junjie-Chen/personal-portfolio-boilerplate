@@ -21,7 +21,7 @@ const dropdownMenu = () => {
   );
 }
 
-const Sidebar = props => {
+export const Sidebar = props => {
   const { sidebar, dropdown, handleClick } = props;
 
   const menu = dropdown ? dropdownMenu() : '';
@@ -47,7 +47,7 @@ const Sidebar = props => {
           </NavLink>
         </li>
         <li>
-          <div onClick={handleClick}>
+          <div id="clickedElement" onClick={handleClick}>
             <span className="glyphicon glyphicon-duplicate" aria-hidden="true"></span>
             Pages
             <span className={dropdown ? "glyphicon glyphicon-chevron-up" : "glyphicon glyphicon-chevron-down"} aria-hidden="true"></span>
