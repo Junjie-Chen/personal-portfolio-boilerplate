@@ -21,7 +21,7 @@ const dropdownMenu = () => {
   );
 }
 
-export const Sidebar = props => {
+const Sidebar = props => {
   const { sidebar, dropdown, handleClick } = props;
 
   const menu = dropdown ? dropdownMenu() : '';

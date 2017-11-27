@@ -7,7 +7,6 @@ import configureMockStore from 'redux-mock-store';
 import thunkMiddleware from 'redux-thunk';
 
 import WrappedSidebar from '../Sidebar';
-import { UnwrappedSidebar } from '..';
 
 Enzyme.configure({ adapter: new Adapter() });
 
@@ -20,11 +19,11 @@ describe('Components', () => {
   let store;
 
   describe('<Sidebar />', () => {
-    let wrappedSidebar, unwrappedSidebar, buttonClick = sinon.spy();
+    let UnwrappedSidebar = WrappedSidebar.WrappedComponent, wrappedSidebar, unwrappedSidebar, buttonClick = sinon.spy();
 
-    beforeEach(() => {
+    beforeEach('creates store and ShallowWrapper', () => {
       store = mockStore(initialState);
-      wrappedSidebar = shallow(<WrappedSidebar handleClick={buttonClick} />, {context: {store}}).dive();
+      wrappedSidebar = shallow(<WrappedSidebar />, {context: {store}}).dive();
       unwrappedSidebar = shallow(<UnwrappedSidebar sidebar={false} dropdown={false} handleClick={buttonClick} />, {context: {store}});
     });
 
@@ -33,8 +32,8 @@ describe('Components', () => {
     });
 
     it('has three props `sidebar`, `dropdown`, `handleClick`', () => {
-      expect(unwrappedSidebar.props().sidebar).to.be.equal(false);
-      expect(unwrappedSidebar.instance().props.dropdown).to.be.equal(false);
+      expect(unwrappedSidebar.props().sidebar).to.be.equal(true);
+      expect(unwrappedSidebar.instance().props.dropdown).to.be.equal(true);
       expect(typeof unwrappedSidebar.instance().props.handleClick).to.be.equal('function');
     });
 
