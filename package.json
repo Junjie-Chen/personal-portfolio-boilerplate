@@ -7,7 +7,7 @@
     "start": "node server",
     "start-dev": "webpack -w & nodemon server",
     "seed": "node seed",
-    "test": "mocha ./client/**/*.spec.js --watch --compilers js:babel-register",
+    "test": "NODE_ENV='test' mocha ./client/**/*.spec.js --watch --compilers js:babel-register",
     "deploy": "script/deploy"
   },
   "keywords": [],
