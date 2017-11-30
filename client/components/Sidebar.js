@@ -27,7 +27,7 @@ const Sidebar = props => {
   const menu = dropdown ? dropdownMenu() : '';
 
   return (
-    <nav id="sidebar" className={sidebar ? 'sidebar-active' : ''}>
+    <nav id="sidebar" className={`${sidebar && 'sidebar-active'}`}>
       <div className="sidebar-header">
         <img src="images/react.png" />
         <h2>Your Name</h2>
