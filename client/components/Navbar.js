@@ -4,9 +4,7 @@ import { NavLink } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { toggleSidebar, toggleNavbar } from '../store';
 
-const Navbar = props => {
-  const { navbar, handleClickSidebar, handleClickNavbar } = props;
-
+const Navbar = ({ navbar, handleClickSidebar, handleClickNavbar }) => {
   return (
     <nav id="navbar">
       <div className={`navbar-header ${navbar && 'navbar-active'}`}>

@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 const projects = [
   {
@@ -60,6 +61,10 @@ const Projects = ({handleClick}) => {
     }
     </div>
   );
+}
+
+Projects.propTypes = {
+  handleClick: PropTypes.func.isRequired
 }
 
 export default Projects;

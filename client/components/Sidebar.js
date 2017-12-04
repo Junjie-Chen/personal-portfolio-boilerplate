@@ -21,9 +21,7 @@ const dropdownMenu = () => {
   );
 }
 
-const Sidebar = props => {
-  const { sidebar, dropdown, handleClick } = props;
-
+const Sidebar = ({ sidebar, dropdown, handleClick }) => {
   const menu = dropdown ? dropdownMenu() : '';
 
   return (
