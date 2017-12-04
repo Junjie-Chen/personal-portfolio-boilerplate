@@ -5,8 +5,8 @@ import Adapter from 'enzyme-adapter-react-16';
 import sinon from 'sinon';
 import { expect } from 'chai';
 
-import WrappedNavbar from '../Navbar';
-import { reducer, middleware, toggleSidebar, toggleNavbar } from '../../store';
+import WrappedNavbar from '../client/components/Navbar';
+import { reducer, middleware, toggleSidebar, toggleNavbar } from '../client/store';
 
 Enzyme.configure({ adapter: new Adapter() });
 

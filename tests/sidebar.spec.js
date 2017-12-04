@@ -7,8 +7,8 @@ import { expect } from 'chai';
 // import configureMockStore from 'redux-mock-store';
 // import thunkMiddleware from 'redux-thunk';
 
-import WrappedSidebar from '../Sidebar';
-import { reducer, middleware, toggleDropdown } from '../../store';
+import WrappedSidebar from '../client/components/Sidebar';
+import { reducer, middleware, toggleDropdown } from '../client/store';
 
 Enzyme.configure({ adapter: new Adapter() });
 

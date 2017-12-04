@@ -309,6 +309,21 @@ body {
         // }
       }
     }
+
+    .contact {
+      p {
+        margin-top: 20px;
+        font-size: 18px;
+
+        a {
+          color: #fff;
+
+          &:hover {
+            color: #42A5F5;
+          }
+        }
+      }
+    }
   }
 
   @import "media-query";

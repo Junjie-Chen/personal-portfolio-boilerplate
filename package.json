@@ -7,7 +7,7 @@
     "start": "node server",
     "start-dev": "webpack -w & nodemon server",
     "seed": "node seed",
-    "test": "NODE_ENV='test' mocha ./client/**/*.spec.js --watch --compilers js:babel-register",
+    "test": "NODE_ENV='test' mocha ./tests/*.spec.js --watch --compilers js:babel-register",
     "deploy": "script/deploy"
   },
   "keywords": [],
@@ -30,7 +30,7 @@
     "react": "^16.0.0",
     "react-bookmark": "^0.8.0",
     "react-dom": "^16.0.0",
-    "react-mapbox-gl": "^2.7.0",
+    "react-mapbox-gl": "^2.8.0",
     "react-motion": "^0.5.2",
     "react-redux": "^5.0.6",
     "react-reveal": "^0.7.2",

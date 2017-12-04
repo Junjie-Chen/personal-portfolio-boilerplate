@@ -5,14 +5,14 @@ import Projects from './Projects';
 import Navbar from './Navbar';
 import { getPosition } from '../store';
 
-const Portfolio = props => {
+const Portfolio = ({ getPosition }) => {
   const handleClick = event => {
     const width = event.currentTarget.offsetWidth;
     const height = event.currentTarget.offsetHeight;
     const left = event.currentTarget.offsetLeft;
     const top = event.currentTarget.offsetTop;
 
-    props.getPosition(width, height, left, top);
+    getPosition(width, height, left, top);
   }
 
   return (
