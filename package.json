@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node server",
-    "start-dev": "webpack -w & nodemon server",
+    "start-dev": "NODE_ENV='development' webpack -w & nodemon server",
     "seed": "node seed",
     "test": "NODE_ENV='test' mocha ./tests/*.spec.js --watch --compilers js:babel-register",
     "deploy": "script/deploy"
