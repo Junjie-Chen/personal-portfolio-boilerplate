@@ -16,7 +16,7 @@ const Container = styled.div`
 `;
 
 const Content = styled.div`
-  height: calc(100% - 100px);
+  height: calc(126vh - 100px);
   padding: 5px;
 `;
 
