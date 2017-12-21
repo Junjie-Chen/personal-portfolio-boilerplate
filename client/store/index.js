@@ -12,4 +12,5 @@ export * from './sidebar';
 export * from './navbar';
 export * from './position';
 export * from './popup';
+export * from './user';
 

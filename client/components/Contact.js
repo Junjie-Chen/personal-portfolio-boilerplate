@@ -11,7 +11,7 @@ const Map = ReactMapboxGl({
 });
 
 const image = new Image(30, 30);
-image.src = 'images/fullstack.png';
+image.src = '/images/fullstack.png';
 
 const images = ['fullstack', image];
 

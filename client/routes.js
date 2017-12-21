@@ -1,8 +1,15 @@
 import React, { Component } from 'react';
 import { HashRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
-import { Main, Portfolio, Project, About, Contact } from './components';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import { Main, Portfolio, Project, About, Contact, Music } from './components';
+import { me } from './store';
 
 class Routes extends Component {
+  componentDidMount() {
+    this.props.login();
+  }
+
   render() {
     return (
       <Router hashType="noslash">
@@ -11,7 +18,7 @@ class Routes extends Component {
             <Route exact path="/" component={Portfolio} />
             <Route path="/about" component={About} />
             <Route path="/pages" component={Portfolio} />
-            <Route path="/music" component={Portfolio} />
+            <Route path="/music" component={Music} />
             <Route path="/picture" component={Portfolio} />
             <Route path="/blog" component={Portfolio} />
             <Route path="/portfolio" component={Portfolio} />
@@ -25,4 +32,14 @@ class Routes extends Component {
   }
 }
 
-export default Routes;
+const mapDispatchToProps = dispatch => ({
+  login() {
+    dispatch(me());
+  }
+})
+
+Routes.propTypes = {
+  login: PropTypes.func.isRequired
+};
+
+export default connect(null, mapDispatchToProps)(Routes);

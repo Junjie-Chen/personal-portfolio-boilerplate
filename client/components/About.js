@@ -33,7 +33,7 @@ const Background = styled.div`
 `;
 
 const Wrapper = styled.div`
-  flex: 1 1 100%;
+  flex: 0 1 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
