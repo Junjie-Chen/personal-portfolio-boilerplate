@@ -1,6 +1,6 @@
 # personal-portfolio-boilerplate
 
-A front-end personal portfolio boilerplate that is built in React, Redux, its animation library (ReactCSSTransitionGroup, React Motion), Flexbox, SCSS and Styled Components for an interactive and attractive user interface
+A front-end personal portfolio boilerplate that is built in React, Redux, its animation library (ReactCSSTransitionGroup, React Motion), Flexbox, SCSS and Styled Components for a responsive, interactive and attractive user interface
 
 ### Notice
 
