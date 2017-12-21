@@ -27,7 +27,7 @@ const Sidebar = ({ sidebar, dropdown, handleClick }) => {
   return (
     <nav id="sidebar" className={`${sidebar && 'sidebar-active'}`}>
       <div className="sidebar-header">
-        <img src="/images/react.png" />
+        <img src="/images/avatar.jpg" />
         <h2>Your Name</h2>
         <h2 className="name">YN</h2>
       </div>
