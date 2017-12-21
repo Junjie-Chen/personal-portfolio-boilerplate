@@ -9,6 +9,21 @@ const sessionStore = new SequelizeStore({ db: database });
 const passport = require('passport');
 const path = require('path');
 
+if (process.env.NODE_ENV !== 'production') {
+  require('../secrets');
+}
+
+passport.serializeUser((user, done) => {
+  done(null, user.id);
+});
+passport.deserializeUser((id, done) => {
+  database.models.user.findById(id)
+  .then(user => {
+    done(null, user);
+  })
+  .catch(done);
+});
+
 const createApp = () => {
   app.use(morgan('dev'));
 
@@ -23,6 +38,8 @@ const createApp = () => {
   }));
   app.use(passport.initialize());
   app.use(passport.session());
+
+  app.use('/auth', require('./auth'));
 
   app.use(express.static(path.join(__dirname, '..', 'node_modules')));
   app.use(express.static(path.join(__dirname, '..', 'public')));
@@ -42,8 +59,8 @@ const syncDatabase = () => {
 };
 
 module.exports = {
+  app,
   sessionStore,
   createApp,
-  syncDatabase,
-  app
+  syncDatabase
 };

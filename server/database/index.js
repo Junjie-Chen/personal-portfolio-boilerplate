@@ -1,9 +1,5 @@
-const Sequelize = require('sequelize');
+const database = require('./postgresql');
 
-const database = new Sequelize(
-  process.env.DATABASE_URL || 'postgres://localhost:5432/personal-portfolio-boilerplate', {
-    logging: false
-  }
-);
+require('./models');
 
 module.exports = database;
