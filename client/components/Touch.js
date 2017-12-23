@@ -58,21 +58,21 @@ const Touch = () => {
         <Fade left delay={500} duration={1000}>
           <Phone className="contact">
             <i className="fa fa-phone fa-3x"></i>
-            <p>646-251-5609</p>
+            <p>123-456-6789</p>
           </Phone>
         </Fade>
         <Fade bottom delay={750} duration={1000}>
           <Email className="contact">
             <i className="fa fa-envelope-o fa-3x"></i>
             <p>
-              <a href="mailto:junjie.chen18@gmail.com">junjie.chen18@gmail.com</a>
+              <a href="mailto:junjie.chen18@gmail.com">feedback@personalportfolioboilerplate.com</a>
             </p>
           </Email>
         </Fade>
         <Fade right delay={1000} duration={1000}>
           <Address className="contact">
             <i className="fa fa-location-arrow fa-3x"></i>
-            <p>5 Hanover Square<br />Floor 25<br />New York, NY 10004</p>
+            <p>Street<br />Apt/Suite/Unit/P.O. Box<br />City<br />State/Province/Region<br />ZIP</p>
           </Address>
         </Fade>
       </Contact>
