@@ -15,8 +15,8 @@ const Content = styled.div`
 
 const Parent = styled.div`
   display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 `;
 
 const Link = styled.a`
@@ -32,7 +32,6 @@ const Link = styled.a`
 `;
 
 const Title = styled.h1`
-  flex: 0 1 100%;
   margin-top: 0;
   margin-bottom: 25px;
   color: #fff;
