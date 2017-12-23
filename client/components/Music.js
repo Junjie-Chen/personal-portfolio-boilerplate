@@ -21,6 +21,7 @@ const Parent = styled.div`
 
 const Link = styled.a`
   padding-top: 20px;
+  padding-bottom: 20px;
   color: #fff;
   font-size: 30px;
   text-decoration: none;
@@ -32,6 +33,7 @@ const Link = styled.a`
 
 const Title = styled.h1`
   flex: 0 1 100%;
+  margin-top: 0;
   margin-bottom: 25px;
   color: #fff;
   text-align: center;
