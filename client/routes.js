@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { HashRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { Main, Portfolio, Project, About, Contact, Music } from './components';
@@ -12,7 +12,7 @@ class Routes extends Component {
 
   render() {
     return (
-      <Router hashType="noslash">
+      <Router>
         <Main>
           <Switch>
             <Route exact path="/" component={Portfolio} />

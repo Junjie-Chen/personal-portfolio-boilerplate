@@ -1,4 +1,5 @@
 import axios from 'axios';
+import history from '../history';
 
 const defaultUser = {};
 
@@ -27,6 +28,7 @@ export const logout = () => dispatch => {
   axios.delete('/auth/logout')
   .then(() => {
     dispatch(removeUser());
+    history.push('/music');
   })
   .catch(console.error);
 }

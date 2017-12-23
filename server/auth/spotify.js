@@ -60,7 +60,7 @@ if (!process.env.clientID || !process.env.clientSecret) {
   router.get('/', passport.authenticate('spotify', { scope: ['user-read-email', 'user-read-private'] }));
 
   router.get('/callback', passport.authenticate('spotify', { failureRedirect: '/login' }), (req, res) => {
-    res.redirect('/#music');
+    res.redirect('/music');
   });
 }
 
