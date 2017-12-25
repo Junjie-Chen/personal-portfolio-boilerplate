@@ -42,7 +42,7 @@ const Description = styled.div`
   font-weight: 400;
 `;
 
-const Anchor = styled.a`
+const Link = styled.a`
   text-decoration: underline;
 `;
 
@@ -81,7 +81,7 @@ const Contact = ({ popup, showPopup }) => {
               onClick={showPopup}>
               <StyledPopup>
                 <Name>Fullstack Academy</Name>
-                <Description><Anchor href="https://www.fullstackacademy.com" target="_blank">Fullstack Academy</Anchor> is an immersive software engineering coding bootcamp located in New York City and Chicago. Students of the full-time flagship course learn full stack JavaScript over the course of a 13-week, on-campus program. Fullstack Academy offers beginner courses in Javascript (JavaScript Jumpstart) and front-end development, as well as a summer program for college-age students (Summer of Code), and a part-time version of their full-time curriculum (Flex).</Description>
+                <Description><Link href="https://www.fullstackacademy.com" target="_blank">Fullstack Academy</Link> is an immersive software engineering coding bootcamp located in New York City and Chicago. Students of the full-time flagship course learn full stack JavaScript over the course of a 13-week, on-campus program. Fullstack Academy offers beginner courses in Javascript (JavaScript Jumpstart) and front-end development, as well as a summer program for college-age students (Summer of Code), and a part-time version of their full-time curriculum (Flex).</Description>
               </StyledPopup>
             </Popup>
           )
