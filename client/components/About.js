@@ -36,13 +36,24 @@ const Wrapper = styled.div`
   flex: 0 1 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   background-color: ${props => props.background};
+  color: #fff;
 `;
 
 const Title = styled.h1`
-  color: #fff;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  text-align: center;
+`;
+
+const Paragraph = styled.p`
+  padding-left: 25px;
+  padding-right: 25px;
+  font-size: 24px;
+`;
+
+const Link = styled.a`
+  color: inherit;
 `;
 
 class About extends Component {
@@ -77,7 +88,10 @@ class About extends Component {
             )}
               <Wrapper background={colors[5]}>
               {interpolatingStyles[3].width < 25 &&
-                <Title>About Me</Title>
+                <div>
+                  <Title>About Me</Title>
+                  <Paragraph>Hi, I'm Junjie. I'm originally from Shanghai, and currently lives in New York.<br /><br />I'm a teaching fellow at <Link href="https://www.fullstackacademy.com" target="_blank">Fullstack Academy</Link>, a top ranked coding bootcamp in the U.S. I recently graduated from there. My career interest lies in front-end web development, so I use any opportunity given to sharpen my skills in JavaScript, HTML and CSS.<br /><br />When you find me not coding, I'm music streaming on Spotify, crafting poetry on Notes, and seeking stylish products in music, tech and fashion industry.</Paragraph>
+                </div>
               }
               </Wrapper>
             </Parent>
