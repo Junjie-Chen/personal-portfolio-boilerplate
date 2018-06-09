@@ -1,8 +1,8 @@
 # personal-portfolio-boilerplate
 
-A personal portfolio boilerplate starter that allows developers to develop and design for their personal portfolio websites.
+A starter boilerplate that allows developers to develop and design for their personal portfolio websites
 
-It is built in React, Redux, its animation library (ReactCSSTransitionGroup, React Motion), Flexbox, SCSS and Styled Components to craft a responsive, interactive and attractive user interface.
+It is built in React, Redux, ReactCSSTransitionGroup, React Motion, Flexbox, SCSS and Styled Components.
 
 ### Notice
 
@@ -14,6 +14,10 @@ This repository is a continuous project. Keep watching for updates.
 2. Move to the root directory: `cd personal-portfolio-boilerplate`.
 3. Run `npm install` to install dependencies.
 4. Run `npm start` to see the application at `http://localhost:8080`.
+
+## UI
+
+![Personal Portfolio Boilerplate](public/images/personal_portfolio_boilerplate.png "A starter boilerplate that allows developers to develop and design for their personal portfolio websites")
 
 ## Demo
 
